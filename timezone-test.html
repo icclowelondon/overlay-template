@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>The getTimezoneOffset() method returns the time difference between UTC time and local time, in minutes.</p>
+        <p>For example, If your time zone is GMT+2, -120 will be returned.</p>
+        <p id="output"></p>
+        <script>
+            // run this on the server and check the time difference...
+            var date = new Date();
+            var output = String(date) + '<br />Timezone offset: ' + date.getTimezoneOffset();
+            document.getElementById('output').innerHTML = (output);
+        </script>
+    </body>
+</html>
