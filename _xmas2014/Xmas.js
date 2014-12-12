@@ -15,7 +15,10 @@ function Xmas() {
     };
     this.url = "http://jumpers.savethechildren.org.uk/";
     $(document).ready(function() {
-        xmas.start();
+        // only add the overlay if it is earlier than 13 december 2014
+        if(new Date().getTime() < Date.parse("December 13, 2014")){
+            xmas.start();
+        }
     });
 }
 Xmas.prototype.createRatioBounds = function(fromRect, toBounds) {
